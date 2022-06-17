@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="estilo/style.css">
-    <script src="js/codigoPF.js"></script>
+
     <title>final</title>
 </head>
 <body>
@@ -15,42 +17,32 @@
         <h4>alquiler de equipos</h4>
 
     </div>
-    <h2>Camaras</h2>
-    <div class="contentPage">
-        <div class="products">
-            <h3>Canon</h3>
-            <img src="https://www.filetdemerluza.com/wp-content/uploads/2022/06/1594281159_1547010.jpeg" alt="camara canon">
-            <h3>$2358</h3>
-            <button class="buttonAdd" onclick="add('camara canon',2358)" >agregar</button>   
+
+        <div class="container">
+        
+            <div>
+                <ul id="milista" class="row list-group list-group-horizontal"></ul>
+            </div>
+    
+            <div>
+                <h4>Tu carrito:</h4>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablabody">
+                        <!--tabla del carrito-->
+                    </tbody>
+                </table>
+            </div>
         </div>
-
-        <div class="products">
-            <h3>Sony</h3>
-            <img src="https://www.filetdemerluza.com/wp-content/uploads/2022/01/1614080143_1624226.jpeg" alt="camara Sony">
-            <h3>$5100</h3>
-            <button class="buttonAdd" onclick="add('camara Sony',5100)">agregar</button>   
-        </div>
-
-        <div class="products">
-            <h3>Black Magic</h3>
-            <img src="https://www.filetdemerluza.com/wp-content/uploads/2020/09/1566299211_1499529-600x600.jpg" alt="camara Black Magic">
-            <h3>$4708</h3>
-            <button class="buttonAdd" onclick="add('camara Black Magic',4708)">agregar</button>   
-        </div>
-
-        <div class="products">
-            <h3>Go Pro</h3>
-            <img src="https://www.filetdemerluza.com/wp-content/uploads/2022/02/1631822665_IMG_1606161.jpeg" alt="camara Go Pro">
-            <h3>$1700</h3>
-            <button class="buttonAdd" onclick="add('camara Go Pro',1700)">agregar</button>   
-        </div>
-
-    </div>
-
-        <div class="shop">
-            <button id="comprar" class="buttonBuy" onclick="pay()">Pagar</button>
-
-        </div>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script src="js/productosPF.js"></script>
+<script src="js/codigoPF.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@ if(localStorage.getItem("carrito")!=null){
 }
 let lista=document.getElementById("milista");
 
-//renderizar
+
 renderizarProductos();
 
 function renderizarProductos(){
@@ -14,7 +14,7 @@ function renderizarProductos(){
         <img src=${producto.foto} width="250" height="250">
         <p> Producto: ${producto.nombre}</p>
         <p><strong> $ ${producto.precio} </strong></p>
-        <button class='btn btn-info' id='btn${producto.id}'>Comprar</button>
+        <button class='btn btn-primary' id='btn${producto.id}'>Comprar</button>
         </li>`;
     }
 
@@ -32,11 +32,11 @@ function agregarAlCarrito(productoNuevo){
         text: "Producto: "+productoNuevo.nombre+" "+"agregado al carro",
         className: "info",
         style: {
-          background: "linear-gradient(to right,#24c78f)",
+          background: "#000",
         }
       }).showToast();
 
-    //alert("Producto: "+productoNuevo.nombre+" "+"agregado al carro");
+    
     document.getElementById("tablabody").innerHTML+=`
         <tr>
             <td>${productoNuevo.id}</td>
@@ -46,3 +46,4 @@ function agregarAlCarrito(productoNuevo){
     `;
     localStorage.setItem("carrito",JSON.stringify (carrito));
 }
+

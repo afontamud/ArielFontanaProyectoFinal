@@ -9,14 +9,33 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="estilo/style.css">
 
-    <title>final</title>
+    <title>final Ariel Fontana</title>
 </head>
 <body>
-    <div class="page-nav">
-        <h1>Rebelde Rental</h1>
-        <h4>alquiler de equipos</h4>
-
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"> <strong>Reveldes Rental</strong> </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">inicio
+                  <span class="visually-hidden"></span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Otros Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Nosotros</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
         <div class="container">
         
@@ -25,7 +44,8 @@
             </div>
     
             <div>
-                <h4>Tu carrito:</h4>
+                <h4><strong>Tu carrito:</strong></h4>
+                <hr>
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -34,8 +54,13 @@
                             <th scope="col">Precio</th>
                         </tr>
                     </thead>
+                    <!--tabla del carrito-->
                     <tbody id="tablabody">
-                        <!--tabla del carrito-->
+                        <tfoot>
+                            <tr id="footer">
+                                <th scope="raw" colspan="5">Carrito Vacio</th>
+                            </tr>
+                        </tfoot>
                     </tbody>
                 </table>
             </div>

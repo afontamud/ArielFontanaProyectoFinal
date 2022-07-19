@@ -6,7 +6,7 @@ Clickbutton.forEach(btn => {
   btn.addEventListener('click', addToCarritoItem)
 })
 
-
+//carrito
 function addToCarritoItem(e){
   const button = e.target
   const item = button.closest('.card')

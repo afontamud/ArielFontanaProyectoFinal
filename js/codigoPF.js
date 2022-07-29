@@ -89,19 +89,19 @@ class UI {
 				e.target.disabled = true;
 				
 
-				// GET productos al carrito
+				// productos al carrito
 				const carritoItem = {...Storage.getProductos(id), cantidad: 1}
 
-				//agregamos el producto al carrito
+				
 				carrito = [...carrito, carritoItem]
 
-				//Guardamos el carrito al localstorage
+				//Guardar carrito al localstorage
 				Storage.saveCart(carrito)
 
-				//Set cart values
+				
 				this.setItemValues(carrito)
 				this.addCarritoItem(carritoItem)
-				//Show al carrito
+				
 			})
 		})
 	}
@@ -120,6 +120,13 @@ class UI {
 	addCarritoItem({image, price, title, id}){
 		const div = document.createElement("div")
 		div.classList.add("carrito__item")
+		Swal.fire({
+			position: 'top-end',
+			icon: 'success',
+			title: 'Se añadio al carrito',
+			showConfirmButton: false,
+			timer: 1500
+		  })
 
 		div.innerHTML = `
 		<img src=${image} alt=${title}>
@@ -204,7 +211,13 @@ class UI {
 	clearCarrito(){
 		const cartItems = carrito.map(item => item.id)
 		cartItems.forEach(id => this.removeItem(id))
-
+		Swal.fire({
+			position: 'top-end',
+			icon: 'success',
+			title: 'Se vacio el carrito',
+			showConfirmButton: false,
+			timer: 1500
+		  })
 		while(carritoCenter.children.length > 0){
 			carritoCenter.removeChild(carritoCenter.children[0])
 		}
@@ -214,6 +227,13 @@ class UI {
 		this.setItemValues(carrito)
 		Storage.saveCart(carrito)
 		let button = this.singleButton(id);
+		Swal.fire({
+			position: 'top-end',
+			icon: 'success',
+			title: 'Producto Eliminado',
+			showConfirmButton: false,
+			timer: 1500
+		  })
 		if(button){
 			button.disabled = false;
 			button.innerText = "Añadir carrito"
